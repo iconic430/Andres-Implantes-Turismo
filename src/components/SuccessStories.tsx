@@ -1,27 +1,32 @@
 import { motion } from "motion/react";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Image } from "lucide-react";
 
 export default function SuccessStories() {
-  const images = [
+  const cases = [
     {
-      url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80",
-      alt: "Resultado clínico - Sonrisa saludable de paciente",
+      id: 1,
+      title: "Caso 1",
+      subtitle: "Implante Unitario de Circonia"
     },
     {
-      url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
-      alt: "Resultado clínico - Restauración dental exitosa",
+      id: 2,
+      title: "Caso 2",
+      subtitle: "Restauración Estética Anterior"
     },
     {
-      url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&auto=format&fit=crop&q=80",
-      alt: "Resultado clínico - Rehabilitación con implante biocompatible",
+      id: 3,
+      title: "Caso 3",
+      subtitle: "Rehabilitación Funcional Biológica"
     },
     {
-      url: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
-      alt: "Resultado clínico - Estética dental premium",
+      id: 4,
+      title: "Caso 4",
+      subtitle: "Implante de Titanio Ultra-puro"
     },
     {
-      url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80",
-      alt: "Resultado clínico - Implantes dentales de alta precisión",
+      id: 5,
+      title: "Caso 5",
+      subtitle: "Restauración CAD/CAM de Alta Estética"
     },
   ];
 
@@ -42,26 +47,26 @@ export default function SuccessStories() {
           </p>
         </div>
 
-        {/* 5 Images Grid - Modern asymmetrical layout with zoom hover effects */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" id="success-images-grid">
-          {images.map((image, index) => (
+        {/* 5 Images Grid - aspect-[9/16] layout with border-dashed placeholders */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6" id="success-images-grid">
+          {cases.map((c, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative rounded-[2rem] overflow-hidden bg-slate-100 border border-slate-200 shadow-md aspect-[4/5] hover:shadow-xl transition-all"
+              className="group relative rounded-[2rem] overflow-hidden bg-slate-50 border-2 border-dashed border-brand-purple-200 hover:border-brand-purple-400 hover:shadow-xl transition-all aspect-[9/16] flex flex-col items-center justify-center p-4 text-center space-y-3"
               id={`success-image-card-${index}`}
             >
-              <img
-                src={image.url}
-                alt={image.alt}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                referrerPolicy="no-referrer"
-              />
-              {/* Subtle elegant gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"></div>
+              <div className="p-3 rounded-full bg-brand-purple-50 text-brand-purple-700 group-hover:bg-brand-purple-100 transition-colors">
+                <Image className="w-6 h-6 text-brand-purple-700 animate-pulse" />
+              </div>
+              <div className="space-y-1">
+                <span className="text-[10px] font-mono font-bold text-brand-purple-700 uppercase tracking-widest block">{c.title}</span>
+                <p className="text-xs font-bold text-slate-900 leading-tight">Insertar imagen, resultado</p>
+                <p className="text-[9px] text-slate-500 max-w-full leading-relaxed">{c.subtitle}</p>
+              </div>
             </motion.div>
           ))}
         </div>

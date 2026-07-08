@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, MessageCircle, ShieldCheck, MapPin, BadgePercent, Zap, Car } from "lucide-react";
+import { ArrowRight, MessageCircle, ShieldCheck, MapPin, BadgePercent, Zap, Car, Image } from "lucide-react";
 import { clinicInfo } from "../data/clinicData";
 
 export default function Hero() {
@@ -84,14 +84,19 @@ export default function Hero() {
               <div className="absolute inset-4 rounded-[2.5rem] bg-brand-purple-600/20 blur-2xl -z-10"></div>
               
               {/* Frame */}
-              <div className="rounded-[2.5rem] border-4 border-brand-purple-900/60 shadow-2xl overflow-hidden aspect-[4/5] bg-brand-dark relative gold-glow">
-                <img
-                  src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop&q=80"
-                  alt="Dr. Andrés Moyetón Arenas Implantes Dentales"
-                  className="w-full h-full object-cover grayscale-20 hover:grayscale-0 transition-all duration-700"
-                  referrerPolicy="no-referrer"
-                  id="hero-img-element"
-                />
+              <div className="rounded-[2.5rem] border-4 border-brand-purple-900/60 shadow-2xl overflow-hidden aspect-[4/5] bg-brand-darker relative gold-glow flex flex-col items-center justify-center p-8 text-center border-dashed">
+                <div className="flex flex-col items-center justify-center space-y-4">
+                  <div className="p-4 rounded-full bg-brand-purple-950/80 border border-brand-purple-900/60 text-brand-gold-400">
+                    <Image className="w-10 h-10 text-brand-gold-400 animate-pulse" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <span className="text-xs font-mono font-bold text-brand-gold-400 uppercase tracking-widest block">[ Foto del Doctor ]</span>
+                    <p className="text-lg font-bold text-white tracking-tight">Insertar imagen, Dr. Andrés</p>
+                    <p className="text-xs text-slate-400 max-w-xs leading-relaxed">
+                      Especialista en implantes dentales, odontología biológica e integral y director de la clínica.
+                    </p>
+                  </div>
+                </div>
                 
                 {/* Visual Badges overlay */}
                 <div className="absolute bottom-6 left-6 right-6 bg-brand-black/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-brand-purple-900/50 flex items-center gap-3">

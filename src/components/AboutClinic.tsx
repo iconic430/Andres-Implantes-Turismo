@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Award, ShieldCheck, Heart, Sparkles, GraduationCap, Microscope, Stethoscope } from "lucide-react";
+import { Award, ShieldCheck, Heart, Sparkles, GraduationCap, Microscope, Stethoscope, Image } from "lucide-react";
 import { clinicInfo } from "../data/clinicData";
 
 export default function AboutClinic() {
@@ -26,13 +26,17 @@ export default function AboutClinic() {
           <div className="lg:col-span-5 relative" id="about-image-col">
             <div className="absolute -inset-4 rounded-[2.5rem] bg-brand-purple-600/5 blur-2xl -z-10"></div>
             
-            <div className="rounded-[2.5rem] border-8 border-slate-50 shadow-xl overflow-hidden aspect-[4/5] bg-slate-100 relative">
-              <img
-                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&auto=format&fit=crop&q=80"
-                alt="Dr. Andrés Moyetón Arenas - Especialista en Implantes Dentales"
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
+            <div className="rounded-[2.5rem] border-8 border-slate-50 shadow-xl overflow-hidden aspect-[4/5] bg-slate-50 relative border-dashed">
+              <div className="w-full h-full flex flex-col items-center justify-center p-8 text-center space-y-3.5">
+                <div className="p-3.5 rounded-full bg-brand-purple-50 text-brand-purple-700">
+                  <Image className="w-10 h-10 text-brand-purple-700 animate-pulse" />
+                </div>
+                <div className="space-y-1">
+                  <span className="text-xs font-mono font-bold text-brand-purple-700 uppercase tracking-widest block">[ Foto del Doctor ]</span>
+                  <p className="text-sm font-semibold text-slate-900 leading-tight">Insertar imagen, Dr. Andrés</p>
+                  <p className="text-[10px] text-slate-500 max-w-xs">Especialista egresado con Cédula Profesional.</p>
+                </div>
+              </div>
               
               {/* Overlay Signature */}
               <div className="absolute bottom-6 left-6 right-6 bg-brand-black/95 text-white backdrop-blur-md p-5 rounded-2xl border border-brand-purple-900/50 space-y-1">

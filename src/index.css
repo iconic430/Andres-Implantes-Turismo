@@ -1,64 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
+  --color-brand-cyan: #3BA9E0;
+  --color-brand-navy: #1A3050;
+  --color-brand-steel: #607D8B;
+  --color-brand-carbon: #333333;
+  
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-  
-  /* Brand colors matching Morado (Purple), Dorado (Gold), Negro (Black) */
-  --color-brand-purple-50: #faf5ff;
-  --color-brand-purple-100: #f3e8ff;
-  --color-brand-purple-500: #a855f7;
-  --color-brand-purple-600: #9333ea;
-  --color-brand-purple-700: #7e22ce;
-  --color-brand-purple-900: #581c87;
-  --color-brand-purple-950: #2e0854;
-  
-  --color-brand-gold-50: #fffbeb;
-  --color-brand-gold-100: #fef3c7;
-  --color-brand-gold-400: #fbbf24;
-  --color-brand-gold-500: #f59e0b;
-  --color-brand-gold-600: #d97706;
-  --color-brand-gold-700: #b45309;
-  
-  --color-brand-black: #090514;
-  --color-brand-dark: #120b24;
-  --color-brand-darker: #0c0717;
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  body {
+    @apply text-brand-carbon font-sans bg-white;
   }
   
-  h1, h2, h3, h4, h5, h6, .font-display {
-    font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
-  }
-
-  code, .font-mono {
-    font-family: 'JetBrains Mono', monospace;
+  h1, h2, h3, h4 {
+    @apply text-brand-navy font-bold;
   }
 }
 
-/* Premium smooth custom shadows and glow effects for premium look */
-.gold-glow {
-  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.25);
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-.purple-glow {
-  box-shadow: 0 0 30px -10px rgba(168, 85, 247, 0.4);
-}
-
-.gradient-text-gold {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-text-purple {
-  background: linear-gradient(135deg, #c084fc 0%, #a855f7 50%, #7e22ce 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-

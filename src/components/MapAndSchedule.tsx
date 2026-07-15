@@ -35,11 +35,7 @@ export default function MapAndSchedule() {
               id="google-maps-iframe-element"
             ></iframe>
             
-            {/* Quick floating compass badge */}
-            <div className="absolute top-4 left-4 bg-brand-black/95 backdrop-blur-sm px-4 py-2.5 rounded-xl shadow-md border border-brand-purple-900/40 flex items-center gap-2 pointer-events-none">
-              <Compass className="w-4 h-4 text-brand-gold-400 animate-spin" style={{ animationDuration: '6s' }} />
-              <span className="text-xs font-bold text-white">Ignacio Ramírez 490, Juárez, México</span>
-            </div>
+
           </div>
 
           {/* Right Col: Schedule Recuadro & Address Info (lg:col-span-5) */}
@@ -106,20 +102,7 @@ export default function MapAndSchedule() {
                   </div>
                 </div>
 
-
-
               </div>
-
-              {/* External Navigation Button */}
-              <a
-                href={clinicInfo.mapsAppLink}
-                target="_blank"
-                referrerPolicy="no-referrer"
-                className="w-full py-3.5 bg-brand-purple-950 hover:bg-brand-purple-900 text-brand-gold-400 font-bold rounded-xl text-center block text-xs border border-brand-purple-800 transition-all relative z-10"
-                id="google-maps-redirect-btn"
-              >
-                ¿Cómo llegar con Google Maps?
-              </a>
             </div>
 
           </div>

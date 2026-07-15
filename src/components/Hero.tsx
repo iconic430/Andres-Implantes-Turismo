@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, MessageCircle, ShieldCheck, MapPin, BadgePercent, Zap, Car, Image } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { clinicInfo } from "../data/clinicData";
 
 export default function Hero() {
@@ -19,15 +19,15 @@ export default function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Hero Content (left) */}
-          <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
+        <div className="flex flex-col items-center text-center">
+          {/* Hero Content */}
+          <div className="max-w-4xl mx-auto space-y-8 flex flex-col items-center">
             {/* Subtitle / Live Target Banner */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 bg-brand-purple-950/80 border border-brand-purple-900 text-brand-gold-400 px-4 py-2.5 rounded-2xl shadow-[0_4px_20px_rgba(147,51,234,0.15)]"
+              className="inline-flex flex-wrap items-center justify-center gap-2 bg-brand-purple-950/80 border border-brand-purple-900 text-brand-gold-400 px-4 py-2.5 rounded-2xl shadow-[0_4px_20px_rgba(147,51,234,0.15)]"
               id="hero-subtitle-container"
             >
               <p className="text-xs sm:text-sm font-semibold tracking-wide text-slate-100" id="hero-user-subtitle">
@@ -44,11 +44,11 @@ export default function Hero() {
               id="hero-title-container"
             >
               <h1 className="text-4xl sm:text-5xl md:text-6.5xl font-sans font-bold tracking-tight leading-tight text-white">
-                Implantes Dentales <span className="gradient-text-gold relative inline-block font-extrabold">Premium</span> <br />
-                por solo <span className="text-brand-gold-400 font-extrabold">$1,500 USD</span>
+                Implantes dentales <span className="gradient-text-gold relative inline-block font-extrabold">premium</span> por solo <span className="text-brand-gold-400 font-extrabold">$1,500 USD</span> <br className="hidden md:inline" />
+                en solo <span className="text-brand-gold-400 font-extrabold">dos sesiones</span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                Recupera tu salud oral y la confianza al sonreír con el <strong className="text-white font-semibold">{clinicInfo.name}</strong> en la frontera. Tecnología biológica avanzada CAD/CAM en Ciudad Juárez, <strong className="text-brand-gold-400">ahorrando más de $3,000 USD</strong> por implante. ¡Pick-up en la frontera (válido para 3 o más implantes)!
+              <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed">
+                Recupera tu salud oral y la confianza al sonreír con el <strong className="text-white font-semibold">Dr. Andrés Moyetón</strong> en la frontera. Tecnología biológica avanzada CAD/CAM en Ciudad Juárez, ahorrando más de <strong className="text-brand-gold-400 font-semibold">$3,000 USD</strong> por implante.
               </p>
             </motion.div>
 
@@ -57,7 +57,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex justify-center lg:justify-start"
+              className="flex justify-center"
               id="hero-cta-container"
             >
               <button
@@ -70,52 +70,6 @@ export default function Hero() {
               </button>
             </motion.div>
 
-          </div>
-
-          {/* Hero Visual Image (right) */}
-          <div className="lg:col-span-5 relative" id="hero-image-container">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              {/* Purple-gold backglow shadow */}
-              <div className="absolute inset-4 rounded-[2.5rem] bg-brand-purple-600/20 blur-2xl -z-10"></div>
-              
-              {/* Frame */}
-              <div className="rounded-[2.5rem] border-4 border-brand-purple-900/60 shadow-2xl overflow-hidden aspect-[4/5] bg-brand-darker relative gold-glow flex flex-col items-center justify-center p-8 text-center border-dashed">
-                <div className="flex flex-col items-center justify-center space-y-4">
-                  <div className="p-4 rounded-full bg-brand-purple-950/80 border border-brand-purple-900/60 text-brand-gold-400">
-                    <Image className="w-10 h-10 text-brand-gold-400 animate-pulse" />
-                  </div>
-                  <div className="space-y-1.5">
-                    <span className="text-xs font-mono font-bold text-brand-gold-400 uppercase tracking-widest block">[ Foto del Doctor ]</span>
-                    <p className="text-lg font-bold text-white tracking-tight">Insertar imagen, Dr. Andrés</p>
-                    <p className="text-xs text-slate-400 max-w-xs leading-relaxed">
-                      Especialista en implantes dentales, odontología biológica e integral y director de la clínica.
-                    </p>
-                  </div>
-                </div>
-                
-                {/* Visual Badges overlay */}
-                <div className="absolute bottom-6 left-6 right-6 bg-brand-black/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-brand-purple-900/50 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-brand-purple-950 border border-brand-purple-850 flex items-center justify-center shrink-0">
-                    <ShieldCheck className="w-6 h-6 text-brand-gold-400" />
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-widest">Cédula Especialidad</p>
-                    <p className="text-xs sm:text-sm font-bold text-white tracking-tight">{clinicInfo.specialtyCedula} | Reg. MSF</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Decorative brand tag */}
-              <div className="absolute -top-4 -left-4 w-14 h-14 rounded-full bg-brand-gold-500 text-brand-black flex flex-col items-center justify-center font-bold text-xs shadow-lg rotate-12 border-2 border-white">
-                <span className="font-extrabold">100%</span>
-                <span className="text-[8px] font-sans font-medium uppercase tracking-tighter">Biológico</span>
-              </div>
-            </motion.div>
           </div>
         </div>
       </div>

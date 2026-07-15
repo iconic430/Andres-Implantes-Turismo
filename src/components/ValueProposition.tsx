@@ -43,13 +43,37 @@ export default function ValueProposition() {
                 <div className="p-4 rounded-2xl bg-brand-purple-950/80 border border-brand-purple-900/60 text-brand-gold-400 group-hover:bg-brand-purple-700 group-hover:text-white transition-all duration-300 shrink-0">
                   <IconComponent className="w-7 h-7" />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 w-full">
                   <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-brand-gold-400 transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-slate-300 text-sm leading-relaxed">
                     {item.description}
                   </p>
+                  {item.id === "advanced-tech" && (
+                    <div className="mt-4 pt-4 border-t border-brand-purple-900/30 grid grid-cols-1 gap-3 text-xs text-slate-300">
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-brand-gold-400 mt-0.5 shrink-0 font-bold">•</span>
+                        <span><strong className="text-white font-semibold">Escáner Intraoral 3D:</strong> Captura imágenes tridimensionales de alta definición sin moldes incómodos de pasta.</span>
+                      </div>
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-brand-gold-400 mt-0.5 shrink-0 font-bold">•</span>
+                        <span><strong className="text-white font-semibold">Fresadora CAD/CAM:</strong> Fabricación digital inmediata de coronas estéticas de circonia o silicato de litio.</span>
+                      </div>
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-brand-gold-400 mt-0.5 shrink-0 font-bold">•</span>
+                        <span><strong className="text-white font-semibold">Rayos X Digitales:</strong> Diagnóstico de alta definición con mínima exposición y planeación virtual milimétrica.</span>
+                      </div>
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-brand-gold-400 mt-0.5 shrink-0 font-bold">•</span>
+                        <span><strong className="text-white font-semibold">Sueroterapia Integrativa:</strong> Apoyo endovenoso biológico con vitaminas para optimizar la regeneración y el postoperatorio.</span>
+                      </div>
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-brand-gold-400 mt-0.5 shrink-0 font-bold">•</span>
+                        <span><strong className="text-white font-semibold">Ultrasonido & Reducción Bacteriana:</strong> Equipos especiales de desinfección profunda para garantizar la máxima bioseguridad.</span>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             );

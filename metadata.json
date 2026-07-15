@@ -1,7 +1,6 @@
 {
-  "name": "AESTHETIC DENTAL CENTER",
-  "description": "Clínica dental premium en Nogales especializada en implantes dentales con tecnología de vanguardia.",
-  "requestFramePermissions": [
-    "geolocation"
-  ]
+  "name": "Clínica NES",
+  "description": "Implantes Dentales Premium y Odontología Biológica en Ciudad Juárez, México, para residentes de Estados Unidos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
